@@ -1,5 +1,3 @@
-require 'minitest/spec'
-require 'minitest/autorun'
 require_relative '../minitest_helper'
 require_relative 'rack_helper'
 
