@@ -1,6 +1,3 @@
-require 'minitest/spec'
-require 'minitest/autorun'
-
 require_relative '../lib/configuration'
 require_relative 'minitest_helper'
 
@@ -27,7 +24,7 @@ describe Configuration do
         ENV['GITHUB_API_KEY'] = nil
         proc { Configuration.new }.must_raise ArgumentError, "Must provide Github API key as GITHUB_API_KEY environment variable"
       end
-      
+
       it "should raise an error if api secret is not provided" do
         ENV['GITHUB_SECRET_KEY'] = nil
         proc { Configuration.new }.must_raise ArgumentError, "Must provide Github API secret as GITHUB_SECRET_KEY environment variable"

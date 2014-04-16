@@ -1,4 +1,6 @@
 require 'turn'
+require 'minitest/spec'
+require 'minitest/autorun'
 
 Turn.config do |c|
  # use one of output formats:
